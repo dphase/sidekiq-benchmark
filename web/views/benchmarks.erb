@@ -9,7 +9,7 @@
 
 <section>
 <% @types.each do |type| %>
-  <h4><%= type %></h4>
+  <h4><%= type.camelize %></h4>
   <figure class="row">
     <div class="col-md-7">
       <h5>Amount of tasks by execution time</h5>

@@ -14,7 +14,7 @@ module Sidekiq
       end
 
       def benchmark_redis_type_key
-        @benchmark_redis_type_key ||= self.class.name.gsub('::', '_').downcase
+        @benchmark_redis_type_key ||= self.class.name.gsub('::', '^').to_snake_case
       end
 
       class Benchmark
